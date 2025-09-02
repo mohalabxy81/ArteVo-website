@@ -1,0 +1,25 @@
+/* Custom styles for testimonials.html */
+.testimonials-hero {
+  text-align: center;
+  padding: 2rem 0;
+}
+.testimonials-list {
+  max-width: 800px;
+  margin: 2rem auto;
+}
+.testimonial-item {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px #eee;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+.testimonial-item blockquote {
+  font-size: 1.1rem;
+  margin: 0 0 1rem 0;
+}
+.testimonial-item cite {
+  font-style: normal;
+  color: #888;
+}

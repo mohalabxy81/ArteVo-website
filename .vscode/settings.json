@@ -1,0 +1,5 @@
+{
+    "github.copilot.enable": {
+        "replace_string_in_file": true
+    }
+}

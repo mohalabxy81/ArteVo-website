@@ -1,0 +1,18 @@
+User-agent: *
+Allow: /
+Sitemap: https://arte-vo.com/sitemap.xml
+
+# Block admin and sensitive folders (if any)
+Disallow: /admin/
+Disallow: /private/
+
+# Improve crawl efficiency
+Crawl-delay: 2
+
+# Allow Googlebot full access
+User-agent: Googlebot
+Allow: /
+
+# Allow Bingbot full access
+User-agent: Bingbot
+Allow: /

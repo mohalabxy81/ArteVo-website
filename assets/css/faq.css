@@ -1,0 +1,19 @@
+/* Custom styles for faq.html */
+.faq-hero {
+  text-align: center;
+  padding: 2rem 0;
+}
+.faq-list {
+  max-width: 800px;
+  margin: 2rem auto;
+}
+.faq-item {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px #eee;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+}
+.faq-item h2 {
+  margin-top: 0;
+}

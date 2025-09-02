@@ -1,0 +1,16 @@
+/* Custom styles for privacy.html */
+.privacy-hero {
+  text-align: center;
+  padding: 2rem 0;
+}
+.privacy-content {
+  max-width: 800px;
+  margin: 2rem auto;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px #eee;
+  padding: 2rem;
+}
+.privacy-content h2 {
+  margin-top: 2rem;
+}

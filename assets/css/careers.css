@@ -1,0 +1,30 @@
+/* Custom styles for careers.html */
+.careers-hero {
+  text-align: center;
+  padding: 2rem 0;
+}
+.careers-list {
+  max-width: 800px;
+  margin: 2rem auto;
+}
+.career-item {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px #eee;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+}
+.career-item h2 {
+  margin-top: 0;
+}
+.apply-btn {
+  display: inline-block;
+  padding: 0.5rem 1.5rem;
+  background: #222;
+  color: #fff;
+  border-radius: 4px;
+  text-decoration: none;
+}
+.apply-btn:hover {
+  background: #444;
+}
