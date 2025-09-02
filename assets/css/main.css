@@ -1,0 +1,13 @@
+/* Main CSS file for all pages */
+body {
+  font-family: "Cairo", Arial, sans-serif;
+  background: #f8f8f8;
+  margin: 0;
+  padding: 0;
+}
+header,
+footer {
+  background: #222;
+  color: #fff;
+}
+/* ... أضف هنا أي تخصيصات عامة لجميع الصفحات ... */
