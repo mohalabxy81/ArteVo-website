@@ -30,11 +30,13 @@
     <script src="assets/main.js"></script>
   </head>
   <body>
+  <!-- Accessibility: skip link -->
+  <a href="#main-content" class="skip-link" style="position:absolute;left:-999px;top:auto;width:1px;height:1px;overflow:hidden;" onfocus="this.style.left='8px';this.style.top='8px';this.style.width='auto';this.style.height='auto';">Skip to main content</a>
     <!-- Main Navigation -->
     <!-- إزالة التكرار في الهيدر -->
     <div id="navbar-placeholder"></div>
     <script src="assets/js/nav-loader.js"></script>
-    <main>
+  <main id="main-content">
       <!-- Hero Section -->
       <section id="home" class="hero home-hero section-with-overlay" style="position: relative; overflow: hidden;">
         <div class="hero-content" style="text-align: center; padding: 50px;">
@@ -69,6 +71,7 @@
           <img
             src="assets/images/FULL LOGO+SLOGAN green.png"
             alt="About ArteVo"
+            loading="lazy"
           />
         </div>
       </section>
@@ -84,11 +87,13 @@
                 src="assets/images/ArteVo portfolio off..pdf-image-009.jpg"
                 alt="Project 9"
                 class="elegant-wwd-img main-img"
+                loading="lazy"
               />
               <img
                 src="assets/images/ArteVo portfolio off..pdf-image-010.jpg"
                 alt="Project 10"
                 class="elegant-wwd-img"
+                loading="lazy"
               />
             </div>
             <div class="elegant-wwd-row">
@@ -96,16 +101,19 @@
                 src="assets/images/ArteVo portfolio off..pdf-image-011.jpg"
                 alt="Project 11"
                 class="elegant-wwd-img"
+                loading="lazy"
               />
               <img
                 src="assets/images/ArteVo portfolio off..pdf-image-012.jpg"
                 alt="Project 12"
                 class="elegant-wwd-img"
+                loading="lazy"
               />
               <img
                 src="assets/images/ArteVo portfolio off..pdf-image-013.jpg"
                 alt="Project 13"
                 class="elegant-wwd-img"
+                loading="lazy"
               />
             </div>
           </div>

@@ -26,10 +26,12 @@
     <link rel="stylesheet" href="assets/css/style.css" />
   </head>
   <body>
+  <!-- Accessibility: skip link -->
+  <a href="#main-content" class="skip-link" style="position:absolute;left:-999px;top:auto;width:1px;height:1px;overflow:hidden;" onfocus="this.style.left='8px';this.style.top='8px';this.style.width='auto';this.style.height='auto';">Skip to main content</a>
     <!-- Navbar -->
 <div id="navbar-placeholder"></div>
 <script src="assets/js/nav-loader.js"></script>
-    <main>
+  <main id="main-content">
       <!-- Hero Section -->
       <section class="hero about-hero section-with-overlay" style="position:relative; overflow:hidden;">
         <div class="section-overlay"></div>
@@ -46,7 +48,8 @@
           <p data-i18n="aboutProcess">We utilize advanced 3D models to evaluate and enhance our proposed design concepts effectively. Additionally, when clients express a desire to alter the project's direction to align with their personal preferences, our team diligently employs their expertise to conceive, sketch, and refine designs until we achieve the most optimal outcome. It doesn’t end when we leave your building…we provide the highest standard of aftercare too.</p>
         </div>
         <div class="about-img-box">
-          <!-- يمكنك إضافة صورة أو محتوى إضافي هنا -->
+      <!-- image placeholder -->
+      <img src="assets/images/ArteVo portfolio off..pdf-image-002.png" alt="ArteVo team" loading="lazy" />
         </div>
         <div class="mv-box">
           <h2 data-i18n="ourVision">Our Vision</h2>
