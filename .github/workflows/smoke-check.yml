@@ -1,0 +1,48 @@
+name: Smoke check
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  smoke-check:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [windows-latest, ubuntu-latest]
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Start static server
+        if: matrix.os == 'windows-latest'
+        run: |
+          python -m http.server 5500 &
+        shell: pwsh
+
+      - name: Start static server (ubuntu)
+        if: matrix.os == 'ubuntu-latest'
+        run: |
+          python3 -m http.server 5500 &
+
+      - name: Run smoke check (windows)
+        if: matrix.os == 'windows-latest'
+        run: |
+          pwsh -NoProfile -ExecutionPolicy Bypass -File scripts/smoke_check.ps1 -BaseUrl http://localhost:5500
+        shell: bash
+
+      - name: Run smoke check (ubuntu)
+        if: matrix.os == 'ubuntu-latest'
+        run: |
+          # simple curl checks on ubuntu
+          set -e
+          for p in / /navbar.html /footer.html /assets/js/i18n.js /assets/css/main.css; do
+            status=$(curl -s -o /dev/null -w "%{http_code}" http://localhost:5500$p)
+            if [ "$status" != "200" ]; then
+              echo "FAIL: http://localhost:5500$p returned $status"
+              exit 1
+            else
+              echo "OK: http://localhost:5500$p -> 200"
+            fi
+          done
