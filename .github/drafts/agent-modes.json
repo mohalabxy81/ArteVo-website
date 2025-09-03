@@ -1,0 +1,16 @@
+{
+  "modes": [
+    {
+      "id": "static",
+      "label": "Static preview",
+      "description": "Serve the repository as static files using Python's http.server (PowerShell helper)",
+      "task": "Serve: Static (PowerShell)"
+    },
+    {
+      "id": "docker",
+      "label": "Docker stack",
+      "description": "Start the docker-compose stack (nginx, web, db) using the serve.ps1 helper",
+      "task": "Serve: Docker (PowerShell)"
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "templates": {
+    "static-nginx": {
+      "displayName": "Static site (nginx)",
+      "description": "Serve the repo root as a static site using nginx (bind mount).",
+      "image": "nginx:stable",
+      "ports": ["8080:80"],
+      "volumes": ["${workspaceFolder}:/usr/share/nginx/html:ro", "${workspaceFolder}/docker/nginx/default.conf:/etc/nginx/conf.d/default.conf:ro"],
+      "env": {}
+    },
+    "node-express": {
+      "displayName": "Example Node Express (web)",
+      "description": "Run the example backend from ./web (builds image).",
+      "build": {
+        "context": "./web",
+        "dockerfile": "Dockerfile"
+      },
+      "ports": ["3000:3000"],
+      "env": { "NODE_ENV": "development" }
+    },
+    "mysql-db": {
+      "displayName": "MySQL 8 (db)",
+      "description": "Local MySQL database for example backend (dev only).",
+      "image": "mysql:8",
+      "env": {
+        "MYSQL_ROOT_PASSWORD": "examplepassword",
+        "MYSQL_DATABASE": "artevo_db",
+        "MYSQL_USER": "user",
+        "MYSQL_PASSWORD": "userpassword"
+      },
+      "ports": ["3306:3306"],
+      "volumes": ["artevo-website_db_data:/var/lib/mysql"]
+    }
+  }
+}
